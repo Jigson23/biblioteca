@@ -61,4 +61,15 @@ public class Libro {
     public void setTipoLibro(ArrayList<String> tipoLibro) {
         this.tipoLibro = tipoLibro;
     }
+
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", ISBN='" + ISBN + '\'' +
+                ", prestado=" + prestado +
+                ", tipoLibro=" + tipoLibro +
+                '}';
+    }
 }
