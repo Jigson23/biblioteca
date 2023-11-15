@@ -56,11 +56,12 @@ public class Biblioteca {
 
 
     public void mostrarLibros() {
-    for (Libro libro : libros) {
-        System.out.println("Título: " + libro.getTitulo());
-        System.out.println("ISBN: " + libro.getISBN());
-        System.out.println("Prestado: " + (libro.isPrestado() ? "Sí" : "No"));
-        System.out.println("----------------------");
+        for (Libro libro : libros) {
+            System.out.println("Título: " + libro.getTitulo());
+            System.out.println("ISBN: " + libro.getISBN());
+            System.out.println("Prestado: " + (libro.isPrestado() ? "Sí" : "No"));
+            System.out.println("----------------------");
+        }
     }
 }
 

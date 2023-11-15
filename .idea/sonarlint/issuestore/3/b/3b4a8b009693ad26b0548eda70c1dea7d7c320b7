@@ -1,0 +1,10 @@
+
+†
+java:S1319"iThe type of "tipoLibro" should be an interface such as "List" rather than the implementation "ArrayList".(äõÑ®8ƒ¡äçº1
+’
+java:S13199"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÒÆıÕùÿÿÿÿ8‡ìçº1
+†
+java:S1319="iThe type of "tipoLibro" should be an interface such as "List" rather than the implementation "ArrayList".(Àû¥Ü8—ìçº1
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äõÑ®8“¡äçº1
+m	java:S117-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚­¾¾8§ìçº1
+k	java:S116"ORename this field "ISBN" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤‚ˆ™8ÿËàçº1
