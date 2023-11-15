@@ -45,7 +45,22 @@ public class Biblioteca {
     }
 
     //TODO TAREA
-    public void devolverLibro(){}
-
-    public void mostrarLibros(){}
+    public void devolverLibro(String ISBN) {
+    for (Libro libro : libros) {
+        if (libro.getISBN().equals(ISBN) && libro.isPrestado()) {
+            libro.setPrestado(false);
+            break; 
+        }
+    }
 }
+
+
+    public void mostrarLibros() {
+    for (Libro libro : libros) {
+        System.out.println("Título: " + libro.getTitulo());
+        System.out.println("ISBN: " + libro.getISBN());
+        System.out.println("Prestado: " + (libro.isPrestado() ? "Sí" : "No"));
+        System.out.println("----------------------");
+    }
+}
+
