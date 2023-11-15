@@ -7,13 +7,13 @@ public class Libro {
     private String autor;
     private String ISBN;
     private boolean prestado;
-    private ArrayList<String> tipoLibro;
+    private String tipoLibro;
 
     public Libro() {
     }
 
     // Constructor
-    public Libro(String titulo, String autor, String ISBN, boolean prestado, ArrayList<String> tipoLibro) {
+    public Libro(String titulo, String autor, String ISBN, boolean prestado, String tipoLibro) {
         this.titulo = titulo;
         this.autor = autor;
         this.ISBN = ISBN;
@@ -54,11 +54,11 @@ public class Libro {
         this.prestado = prestado;
     }
 
-    public ArrayList<String> getTipoLibro() {
+    public String getTipoLibro() {
         return tipoLibro;
     }
 
-    public void setTipoLibro(ArrayList<String> tipoLibro) {
+    public void setTipoLibro(String tipoLibro) {
         this.tipoLibro = tipoLibro;
     }
 
