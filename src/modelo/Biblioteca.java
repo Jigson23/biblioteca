@@ -6,14 +6,10 @@ import java.util.stream.Collectors;
 
 public class Biblioteca {
 
-    private List<Libro> libros;
+    private List<Libro> libros = new ArrayList<>();
 
-    public Biblioteca() {
-        this.libros = new ArrayList<>();
-    }
-
-    public Biblioteca(List<Libro> libros) {
-        this.libros = libros;
+    public void agregarlibro(Libro libro) {
+        this.libros.add(libro);
     }
 
     public List<Libro> buscarPorTitulo(String titulo) {
@@ -46,13 +42,13 @@ public class Biblioteca {
 
     //TODO TAREA
     public void devolverLibro(String ISBN) {
-    for (Libro libro : libros) {
-        if (libro.getISBN().equals(ISBN) && libro.isPrestado()) {
-            libro.setPrestado(false);
-            break; 
+        for (Libro libro : libros) {
+            if (libro.getISBN().equals(ISBN) && libro.isPrestado()) {
+                libro.setPrestado(false);
+                break;
+            }
         }
     }
-}
 
 
     public void mostrarLibros() {
