@@ -22,6 +22,7 @@ public class MenuPrincipal {
             System.out.println("******************************** Bienvenido a la Biblioteca ***************************");
             System.out.println("1. Agregar Libro");
             System.out.println("2. Buscar libro por titulo");
+            System.out.println("3. Prestar libro");
             System.out.println("Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar el scaner
@@ -32,11 +33,21 @@ public class MenuPrincipal {
                 case 2:
                     buscarPorTitulo();
                     break;
+                case 3:
+                    prestarLibro();
+                    break;
                 default:
                     System.out.println("Opcion no válida, intenta nuevamente");
             }
         } while (opcion != 0);
 
+    }
+
+    private void prestarLibro() {
+        System.out.println("Ingrese el ISBN del libro a solicitar");
+        String ISBN = scanner.nextLine();
+
+        controller.prestarLibro(ISBN);
     }
 
     private void agregarLibro() {
@@ -66,7 +77,7 @@ public class MenuPrincipal {
         } else {
             System.out.println("Resultados de la búsqueda por título:");
             for (Libro libro : libros) {
-                System.out.println("ISBN: " + libro.getISBN() + ", Título: " + libro.getTitulo() + ", Autor: " + libro.getAutor());
+                System.out.println("ISBN: " + libro.getISBN() + ", Título: " + libro.getTitulo() + ", Autor: " + libro.getAutor() +", Estado: " + );
             }
         }
     }
