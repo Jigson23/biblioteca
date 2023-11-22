@@ -23,6 +23,7 @@ public class MenuPrincipal {
             System.out.println("1. Agregar Libro");
             System.out.println("2. Buscar libro por titulo");
             System.out.println("3. Prestar libro");
+            System.out.println("4. Devolver libro");
             System.out.println("Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar el scaner
@@ -36,11 +37,21 @@ public class MenuPrincipal {
                 case 3:
                     prestarLibro();
                     break;
+                case 4:
+                    devolverLibro();
+                    break;
                 default:
                     System.out.println("Opcion no válida, intenta nuevamente");
             }
         } while (opcion != 0);
 
+    }
+
+    private void devolverLibro() {
+        System.out.println("Ingrese el ISBN del libro que quiera devolver");
+        String ISBN = scanner.nextLine();
+
+        controller.devolverLibro(ISBN);
     }
 
     private void prestarLibro() {
