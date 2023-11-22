@@ -53,7 +53,17 @@ public class MenuPrincipal {
     }
 
     public void buscarPorTitulo() {
-        List<Libro> libros = controller.buscarPorTitulo("A");
+        System.out.println("Ingresa el Título a buscar: ");
+        String tituloABuscar = scanner.nextLine();
 
+        List<Libro> libros = controller.buscarPorTitulo(tituloABuscar);
+        if (libros.isEmpty()) {
+            System.out.println("No se encontraron libros con ese título.");
+        } else {
+            System.out.println("Resultados de la búsqueda por título:");
+            for (Libro libro : libros) {
+                System.out.println("Título: " + libro.getTitulo() + ", Autor: " + libro.getAutor());
+            }
+        }
     }
 }
