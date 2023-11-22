@@ -21,12 +21,16 @@ public class MenuPrincipal {
         do {
             System.out.println("******************************** Bienvenido a la Biblioteca ***************************");
             System.out.println("1. Agregar Libro");
+            System.out.println("2. Buscar libro por titulo");
             System.out.println("Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar el scaner
             switch (opcion) {
                 case 1:
                     agregarLibro();
+                    break;
+                case 2:
+                    buscarPorTitulo();
                     break;
                 default:
                     System.out.println("Opcion no válida, intenta nuevamente");
@@ -62,7 +66,7 @@ public class MenuPrincipal {
         } else {
             System.out.println("Resultados de la búsqueda por título:");
             for (Libro libro : libros) {
-                System.out.println("Título: " + libro.getTitulo() + ", Autor: " + libro.getAutor());
+                System.out.println("ISBN: " + libro.getISBN() + ", Título: " + libro.getTitulo() + ", Autor: " + libro.getAutor());
             }
         }
     }

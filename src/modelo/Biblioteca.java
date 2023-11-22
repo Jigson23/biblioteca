@@ -28,7 +28,7 @@ public class Biblioteca {
 
         return
                 this.libros.stream()
-                .filter(libro -> libro.getTitulo().equalsIgnoreCase(titulo) && !libro.isPrestado())
+                .filter(libro -> libro.getTitulo().contains(titulo) && !libro.isPrestado())
                 .collect(Collectors.toList());
     }
 
