@@ -77,7 +77,7 @@ public class MenuPrincipal {
         } else {
             System.out.println("Resultados de la búsqueda por título:");
             for (Libro libro : libros) {
-                System.out.println("ISBN: " + libro.getISBN() + ", Título: " + libro.getTitulo() + ", Autor: " + libro.getAutor() +", Estado: " + );
+                System.out.println("ISBN: " + libro.getISBN() + ", Título: " + libro.getTitulo() + ", Autor: " + libro.getAutor() +", Estado: " + (libro.isPrestado() ? "Prestado" : "Disponible"));
             }
         }
     }
